@@ -102,7 +102,7 @@ def process_srt_file(sub_dir, output_file, max_diff):
 # main 함수
 # -----------------------------
 def main():
-  subtitles_dir = "/content/drive/MyDrive/넷플 영화 자막 데이터"
+  subtitles_dir = "/넷플 영화 자막 데이터"
   # tsv파일로 저장
   output_tsv = "./aligned_subtitles.tsv"
 
