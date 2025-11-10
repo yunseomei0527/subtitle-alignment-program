@@ -1,4 +1,4 @@
-from src.align_subtitles import process_folder
+from src.align_subtitles import process_srt_file
 from src.add_context import add_context
 import os
 
@@ -12,7 +12,7 @@ def main():
         os.makedirs("data/processed")
 
     # 자막 매칭
-    process_folder(input_dir, aligned_tsv, max_diff=1000)
+    process_srt_file(input_dir, aligned_tsv, max_diff=1000)
 
     # 문맥 추가
     add_context(aligned_tsv, context_tsv)

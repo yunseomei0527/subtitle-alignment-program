@@ -96,24 +96,4 @@ def process_srt_file(sub_dir, output_file, max_diff):
     final_df.drop_duplicates(inplace=True)
     final_df.to_csv(output_file, sep='\t', index=False, encoding="utf-8-sig")
     print(f"총 {len(final_df)} 문장 쌍 → {output_file}")
-    
-
-# -----------------------------
-# main 함수
-# -----------------------------
-def main():
-  subtitles_dir = "/넷플 영화 자막 데이터"
-  # tsv파일로 저장
-  output_tsv = "./aligned_subtitles.tsv"
-
-  # 폴더 없을 시
-  if not os.path.exists(subtitles_dir):
-    print(f"폴더가 존재하지 않습니다: {subtitles_dir}")
-    return
-
-  process_srt_file(subtitles_dir, output_tsv, max_diff = 1000)
-
-  print("모든 파일 처리 완료!")
-
-if __name__ == "__main__":
-  main()
+  
