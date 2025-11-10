@@ -1,6 +1,7 @@
 from src.align_subtitles import process_srt_file
 from src.add_context import add_context
 import os
+import sys
 
 def main():
     input_dir = "data/raw"
